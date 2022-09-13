@@ -1,14 +1,14 @@
-const dotenv = require('dotenv');
-
-let MyEnivornment={};
+const Dotenv = require("dotenv").config;
+// const path = require('path'); 
+let MyEnvironment={};
 if (process.env.NODE_ENV=='testing'){
-    MyEnivornment=dotenv.config({path:`${__dirname}/../application-testing-environment.env`});
+    MyEnvironment=Dotenv.config({path:`${__dirname}/../application-testing-environment.env`});
 }
 if(process.env.NODE_ENV === 'development'){
-    MyEnviorment = dotenv.config({path:`${__dirname}/../application-development-environment.env`});
+    MyEnvironment = Dotenv.config({path:`${__dirname}/../application-development-environment.env`});
 }
 
 if(process.env.NODE_ENV === 'production'){
-    MyEnviorment = dotenv.config({path:`${__dirname}/../application-production-environment.env`});
+    MyEnvironment = Dotenv.config({path:`${__dirname}/../application-production-environment.env`});
 }
-console.log(MyEnivornment);
+console.log(MyEnvironment);

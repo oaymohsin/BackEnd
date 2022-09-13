@@ -1,6 +1,7 @@
 const Package=require('../package.json');
 const mongoose=require('mongoose');
 
+
 mongoose.connect(`${process.env.DATA_BASE_URI}`,{useNewUrlParser:true, useUnifitedTopology:true},(error,connection)=>{
     if(!error){
         console.log(`\nMongoDB Connected Successfully at MongoAtlas with Database E-commerce Database\n`);
