@@ -1,11 +1,12 @@
 const express=require("express");
 
 const LoadMyEnvironmentVariable=require('./configuration/LoadMyEnvironmentVariable');
+const DatabaseConfiguration=require('./configuration/DatabaseConfiguration');
 const app=express();
 
-// port=process.env.PORT;
-app.listen(process.env.PORT,()=>{
-    console.log(`your app is listed on port : ${process.env.PORT}`);
+port=process.env.PORT;
+app.listen(port,()=>{
+    console.log(`your app is listed on port : ${port}`);
     console.log(process.env.NODE_ENV);
     // console.log(ports);
 });
