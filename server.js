@@ -59,8 +59,8 @@ app.use((error,req,res,next)=>{
 
 
 //Start Block for listening your app on defined port
-app.listen(port,()=>{
-    console.log(`your app is listed on port : ${port}`);
+app.listen(PORT,()=>{
+    console.log(`your app is listed on port : ${PORT}`);
     console.log(process.env.NODE_ENV);
     // console.log(ports);
 });

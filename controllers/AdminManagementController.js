@@ -16,6 +16,23 @@ const AddingTwoNumbers=(req,res)=>{
         })
     }
 }
+const SubtractingTwoNumbers=(req,res)=>{
+    try {
+        const {number1,number2}=req.body;
+        const result=number1-number2;
+        res.json({
+            Message:'You have reached SubtractingTwoNumbers End Point',
+            Result:result,
+            Data:true
+        })
+    } catch (error) {
+        res.json({
+            Message:error.message,
+            Result:null,
+            Data:false
+        })
+    }
+}
 module.exports={
-    AddingTwoNumbers
+    AddingTwoNumbers,SubtractingTwoNumbers
 }
